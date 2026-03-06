@@ -61,17 +61,25 @@
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
         "GITHUB_TOKEN": "ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        "GITHUB_REPO": "your-org/uchi"
+        "GITHUB_REPO": "shanet7/Claude_1"
       }
     }
 
   },
 
   "github": {
-    "_comment": "gh CLI用の設定（/issue-triage コマンドで使用）",
-    "repo": "your-org/uchi",
+    "_comment": "gh CLI用の設定（/issue-triage コマンドで使用）。gh auth loginで認証済み。",
+    "repo": "shanet7/Claude_1",
+    "owner": "shanet7",
+    "defaultBranch": "main",
     "defaultMilestone": "Q1 2026",
-    "defaultLabels": ["P2-medium"]
+    "defaultLabels": ["P2-medium"],
+    "milestones": {
+      "Q1 2026": 1,
+      "Q2 2026": 2,
+      "Q3 2026": 3,
+      "Q4 2026": 4
+    }
   },
 
   "project": {
