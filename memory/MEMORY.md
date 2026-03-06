@@ -20,6 +20,21 @@
 → 関連: フォルダ / Issue #XX
 -->
 
+### 2026-03-07 | #決定事項
+Notion MCP 連携完了。
+- Bot名: UCHI Claude_test_Mar2026
+- ワークスペース: shunさんのNotion
+- トークン保存先: ~/.claude/settings.json（グローバル・Git管理外）
+- 連携済みページ: クイックメモ / サブページ（追加は各ページの「コネクト」から）
+- 読み書きテスト: ✅ 成功
+
+### 2026-03-07 | #決定事項
+GitHub連携完了（shanet7/Claude_1）。
+- gh CLI認証済み（shanet7）
+- ラベル23種・マイルストーン4期（Q1〜Q4 2026）作成済み
+- Issueテンプレート4種: general-task / market-entry / b2b-lead / creative-brief
+- Issue #1 作成済み: 🇲🇾 Malaysia 参入戦略の調査開始
+
 ### 2026-03-06 | #決定事項
 UCHIのClaude Code作業環境を UCHI/ ディレクトリとして整備。
 CLAUDE.md, スラッシュコマンド3種, MCP設定テンプレートを作成。
