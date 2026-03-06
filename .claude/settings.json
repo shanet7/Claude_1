@@ -1,0 +1,83 @@
+{
+  "_comment": "UCHI Claude Code プロジェクト設定 / MCPサーバー設定",
+  "_docs": "MCP設定の詳細: https://docs.anthropic.com/ja/docs/claude-code/mcp",
+
+  "mcpServers": {
+
+    "notion": {
+      "_comment": "Notion MCP — タスク・ドキュメント管理",
+      "_setup": [
+        "1. Notion Integrations ページでIntegrationを作成: https://www.notion.so/profile/integrations",
+        "2. Integration Token（secret_xxx）を取得",
+        "3. 連携させたいNotionページ/DBで「コネクト」からIntegrationを追加",
+        "4. NOTION_API_KEY に Token を設定"
+      ],
+      "command": "npx",
+      "args": ["-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "NOTION_API_KEY": "secret_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+
+    "google-calendar": {
+      "_comment": "Google Calendar MCP — スケジュール管理・/daily-schedule 連携",
+      "_setup": [
+        "1. Google Cloud Consoleでプロジェクト作成: https://console.cloud.google.com",
+        "2. Google Calendar API を有効化",
+        "3. OAuth 2.0 クライアントIDを作成（デスクトップアプリ）",
+        "4. credentials.json をダウンロードして ~/.config/gcp-credentials/ に配置",
+        "5. 初回認証: npx @gcsim/google-calendar-mcp を実行してブラウザ認証"
+      ],
+      "command": "npx",
+      "args": ["-y", "@gcsim/google-calendar-mcp"],
+      "env": {
+        "GOOGLE_CREDENTIALS_PATH": "~/.config/gcp-credentials/credentials.json"
+      }
+    },
+
+    "google-sheets": {
+      "_comment": "Google Sheets MCP — 財務・在庫・クライアントDB管理",
+      "_setup": [
+        "1. Google Calendar と同じ GCP プロジェクトで Google Sheets API を有効化",
+        "2. 同じ credentials.json を使用可能",
+        "3. または Service Account で認証する方法も可"
+      ],
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "env": {
+        "GOOGLE_CREDENTIALS_PATH": "~/.config/gcp-credentials/credentials.json"
+      }
+    },
+
+    "github": {
+      "_comment": "GitHub MCP — Issue作成・PR管理・/issue-triage 連携",
+      "_setup": [
+        "1. GitHub Personal Access Token を生成: https://github.com/settings/tokens",
+        "2. 必要な権限: repo（Full control of private repositories）",
+        "3. GITHUB_TOKEN に Token を設定",
+        "4. GITHUB_REPO に 'owner/repo-name' 形式で設定"
+      ],
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "GITHUB_REPO": "your-org/uchi"
+      }
+    }
+
+  },
+
+  "github": {
+    "_comment": "gh CLI用の設定（/issue-triage コマンドで使用）",
+    "repo": "your-org/uchi",
+    "defaultMilestone": "Q1 2026",
+    "defaultLabels": ["P2-medium"]
+  },
+
+  "project": {
+    "name": "UCHI",
+    "language": "ja",
+    "memoryFile": "memory/MEMORY.md",
+    "activeProjectsDir": "10_projects/active"
+  }
+}

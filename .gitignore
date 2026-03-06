@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# 機密情報（絶対にコミットしない）
+*.env
+.env.*
+secrets/
+credentials/
+**/credentials.json
+**/*_key.json
+
+# 財務・個人情報（要注意）
+# 06_finance/reports/ は個別判断で .gitkeep のみ管理推奨
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 一時ファイル
+tmp/
+*.tmp
+*.log
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
