@@ -21,6 +21,15 @@
 -->
 
 ### 2026-03-07 | #決定事項
+Google Calendar MCP 連携完了。
+- パッケージ: @cocal/google-calendar-mcp
+- 接続カレンダー: shane.takakura@gmail.com（メイン）
+- 認証情報: ~/.config/google-calendar-mcp/（gcp-oauth.keys.json + tokens.json）
+- GCPプロジェクトID: 124007224141（UCHI-Calendar）
+- トークン保存先: ~/.claude/settings.json（グローバル・Git管理外）
+- 読み取りテスト: ✅ 成功
+
+### 2026-03-07 | #決定事項
 Notion MCP 連携完了。
 - Bot名: UCHI Claude_test_Mar2026
 - ワークスペース: shunさんのNotion
