@@ -108,6 +108,24 @@
       "Bash(pwd)",
       "Bash(which *)",
       "Bash(open *)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(sudo *)",
+      "Bash(chmod *)",
+      "Bash(chown *)",
+      "Bash(curl * | bash*)",
+      "Bash(wget * | bash*)",
+      "Bash(* ~/.ssh/*)",
+      "Bash(* ~/.aws/*)",
+      "Bash(* ~/.zshrc*)",
+      "Bash(* ~/.bashrc*)",
+      "Bash(* /etc/*)",
+      "Bash(* /System/*)",
+      "Bash(history*)",
+      "Bash(env*)",
+      "Bash(printenv*)"
     ]
   }
 }
